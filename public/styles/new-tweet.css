@@ -9,7 +9,7 @@
 }
 
 form {
-  width: 80%;
+  width: 100%;
 }
 
 .wrapper {
@@ -29,6 +29,7 @@ form {
   outline: none;
   width: 82%;
   height: 35px;
+  background-color: #f4f1ec;
 }
 
 .button-wrapper {
@@ -47,4 +48,15 @@ button {
 
 .counter {
   font-family: "bungee", 'sans-serif';
+}
+
+.tweet-container {
+  border: 2px solid black;
+}
+
+.tweet-container article header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
