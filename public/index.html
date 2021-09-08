@@ -20,9 +20,13 @@
   <link rel="stylesheet" href="styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="styles/header.css" type="text/css" />
   <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="styles/bubbles.css" type="text/css" />
+  <link rel="stylesheet" href="styles/divider.css" type="text/css" />
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
@@ -32,30 +36,27 @@
   <!-- Top nav bar (fixed) -->
 
   <header class="main-header">
-    <nav>
-      <span id="logo">tweeter</span>
-      <span>
-        <strong>Write</strong> a new tweet<br>
-        <i class="fas fa-angle-double-down"></i>
-      </span>
-    </nav>
-    <div>
-      <img src="/images/profile-hex.png">
+    <div class="divider">
+      <nav>
+        <span id="logo">tweeter</span>
+        <span>
+          <strong>Write</strong> a new tweet<br>
+          <i class="fas fa-angle-double-down"></i>
+        </span>
+      </nav>
+      <section class="profile">
+        <div class="user-name">
+          <h2>Whitney</h2>
+        </div>
+        <img width="150" height="150" src="/images/profile-hex.png">
+      </section>
     </div>
-    <br>
-    <div>
-      <h2>Whitney</h2>
-    </div>
-  </header>
 
-
-  <!-- Page-specific (main) content here -->
-  <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+      <h2>What's the tea?</h2>
       <form method="POST" action="/tweets/">
         <div class="wrapper">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="Spill the tea, sis..."></textarea>
         </div>
         <div class="button-wrapper">
           <button type="submit">Tweet</button>
@@ -63,50 +64,19 @@
         </div>
       </form>
     </section>
+  </header>
 
-    <section class="tweet-container">
-      <article>
-        <header>
-          <div class="name-wrapper">
-            <i class="fas fa-user"></i>
-            <span>Whitney H</span>
-          </div>
-          <div>
-            <span><a href="#">@huongw</a></span>
-          </div>
-        </header>
-        <div class="tweet-post">
-          <p>Hello world!</p>
-        </div>
-        <footer>
-          <span>
-            10 days ago
-          </span>
-          <span class="icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </span>
-        </footer>
-      </article>
-    </section>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+
+    <section id="tweets-container"></section>
+
   </main>
-  <div class="hi">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quos veniam, enim facere facilis incidunt odit
-    ratione pariatur veritatis amet molestiae repellat unde impedit officiis asperiores temporibus excepturi eius fugit
-    minima blanditiis. Quod repellat beatae eos laudantium saepe exercitationem doloribus ab quo asperiores, fugiat
-    dolor nulla expedita maiores incidunt quis molestiae molestias dolores ad assumenda. Architecto in inventore facilis
-    impedit optio asperiores explicabo! Voluptatem, quis maiores exercitationem neque dicta rerum, ipsam culpa mollitia
-    modi deleniti, facilis aliquam dolore labore? Autem dignissimos, rem voluptate quaerat delectus fuga velit
-    exercitationem dolorum obcaecati provident alias quos, non nulla nisi consectetur. Nemo fugit molestiae ut illum,
-    odit aliquam voluptate? Assumenda ex eum voluptas ratione nobis, voluptatibus neque. Suscipit nihil deserunt
-    provident nam dicta voluptate atque? Pariatur impedit, enim corporis aut nisi, earum consectetur omnis quas aliquam
-    labore quam ad odio, nulla quis exercitationem molestiae autem qui voluptates non ducimus amet unde? Dicta culpa
-    blanditiis voluptatibus voluptas? Iusto sed numquam quia molestias nemo earum est cum aperiam reiciendis, doloribus,
-    sunt sit, quisquam blanditiis assumenda velit error rerum quis debitis saepe ab commodi porro corporis voluptate!
-    Officia incidunt porro sint tempora, blanditiis reprehenderit rerum laborum labore odio nam consequuntur at error
-    excepturi, asperiores ab? Asperiores, possimus.
-  </div>
+
+  <div class="bubble bubble1"></div>
+  <div class="bubble bubble2"></div>
+  <div class="bubble bubble3"></div>
 </body>
 
 </html>

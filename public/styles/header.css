@@ -1,14 +1,23 @@
 .main-header {
-  height: 400px;
+  min-height: 20vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
-  background-color: #e0a912;
-  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  background-color: #f4f1ec;
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 2;
+}
+
+.profile {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.user-name {
+  color: #fff;
+  font-size: 1.5rem;
 }
