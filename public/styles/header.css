@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
   background-color: #e0a912;
   background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  position: sticky;
+  top: 0;
+  left: 0;
 }

@@ -8,6 +8,8 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -24,12 +26,14 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- nav {
-   font-family: 'bungee', 'sans-serif';
- }
 
  main{
+   max-width: 1000px;
    width: 90%;
    margin: auto;
  }
 
+a {
+  color: grey;
+  text-decoration: none;
+}
