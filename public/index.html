@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="styles/bubbles.css" type="text/css" />
   <link rel="stylesheet" href="styles/divider.css" type="text/css" />
+  <link rel="stylesheet" href="styles/error.css" type="text/css" />
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
@@ -53,6 +54,9 @@
     </div>
 
     <section class="new-tweet">
+      <p class="error-msgs">
+
+      </p>
       <h2>What's the tea?</h2>
       <form method="POST" action="/tweets/">
         <div class="wrapper">
@@ -77,6 +81,7 @@
   <div class="bubble bubble1"></div>
   <div class="bubble bubble2"></div>
   <div class="bubble bubble3"></div>
+  <div class="bubble bubble4"></div>
 </body>
 
 </html>

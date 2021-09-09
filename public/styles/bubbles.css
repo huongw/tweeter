@@ -1,6 +1,6 @@
 .bubble {
   position: fixed;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(73, 197, 219, 0.5));
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(150, 181, 205, 0.5));
   border-radius: 50%;
 }
 
@@ -10,15 +10,15 @@
   z-index: -1;
   width: 700px;
   height: 700px;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(73, 197, 219, 0.5));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(150, 181, 205, 0.5));
 }
 
 .bubble2 {
-  top: 90%;
+  top: 80%;
   left: 0;
   z-index: -1;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }
 
 .bubble3 {
@@ -27,5 +27,15 @@
   z-index: -1;
   width: 800px;
   height: 800px;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(73, 197, 219, 0.5));
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(150, 181, 205, 0.5));
+}
+
+.bubble4 {
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(150, 181, 205, 0.5));
 }

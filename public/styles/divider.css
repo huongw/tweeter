@@ -1,7 +1,5 @@
 .divider{
-  /* background-color: #0b7a9c;
-  background-image: url("https://www.transparenttextures.com/patterns/dust.png"); */
-  background-image: url(../images/marble.jpg);
+  background-image: url(../images/geometry.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -16,5 +14,5 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(144, 160, 165, 0.5);
+  background-color: rgba(25, 98, 133, 0.3);
 }

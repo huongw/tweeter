@@ -1,0 +1,10 @@
+.error-msgs {
+  background-color: rgba(205, 156, 150, 0.5);
+  height: 30px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border:rgb(205, 152, 150);
+  display: none;
+  color: #000; 
+}
+

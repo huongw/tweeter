@@ -1,5 +1,4 @@
 .new-tweet {
-  /* margin-top: 50px; */
   padding: 20px;
   width: 70%;
   max-width: 1000px;
@@ -57,10 +56,10 @@ button:hover {
 
 article.tweet {
   padding: 20px;
-  border: 2px solid rgb(38, 148, 221);
+  border: 2px solid rgba(199, 219, 235, 1);
   border-radius: 1.5rem;
   margin-bottom: 30px;
-  background-color: rgba(143, 213, 235, 0.5)
+  background-color: rgba(199, 219, 235, 0.5);
 }
 
 article.tweet:hover {
@@ -74,9 +73,11 @@ article.tweet header{
 
 .name-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 150px;
+}
+
+.name-wrapper span {
+  padding-left: 10px;
 }
 
 .tweet-post {
