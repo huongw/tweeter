@@ -12,11 +12,29 @@ nav {
   font-family: 'bungee', 'sans-serif';
 }
 
-nav span {
+.write-tweet {
   text-align: center;
   font-weight: bold;
+  cursor: pointer;
 }
 
-nav span i {
-  color: red;
+.write-tweet i {
+  color: rgb(180, 73, 207);
+}
+
+.write-tweet:hover i{
+  animation: 1.3s linear infinite bouncedown;
+}
+
+@keyframes bouncedown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+
 }

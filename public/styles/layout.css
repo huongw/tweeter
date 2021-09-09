@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -36,4 +37,53 @@ body {
 a {
   color: #545149;
   text-decoration: none;
+}
+
+.button-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgb(161, 161, 241);
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s linear;
+  border: 2px solid rgb(104, 104, 170);
+}
+
+.button-up:hover {
+  background-color: rgb(104, 104, 170);
+}
+
+.button-up i {
+  color: #fff;
+  font-size: 40px;
+  position: relative;
+  left: 21px;
+  top: 12px;
+}
+
+.button-up:hover i {
+  animation: 1.5s linear infinite bounceup;
+}
+
+@keyframes bounceup {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

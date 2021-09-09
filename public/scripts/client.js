@@ -1,35 +1,48 @@
-const createTweetElement = function(tweet) {
-  let $tweet = `
-  <article class="tweet">
-  <header>
-    <div class="name-wrapper">
-      <img src="${tweet.user.avatars}">
-      <span>${tweet.user.name}</span>
-    </div>
-    <div>
-      <span><a href="#">${tweet.user.handle}</a></span>
-    </div>
-  </header>
-  <div class="tweet-post">
-    <p>${tweet.content.text}</p>
-  </div>
-  <footer>
-    <span>
-      ${timeago.format(tweet["created_at"])}
-    </span>
-    <span class="icons">
-      <i class="fas fa-flag"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="fas fa-heart"></i>
-    </span>
-  </footer>
-</article>
-`
-return $tweet;
-};
+
 
 $(document).ready(function() {
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+  const createTweetElement = function(tweet) {
+    let $tweet = `
+    <article class="tweet">
+    <header>
+      <div class="name-wrapper">
+        <img src="${tweet.user.avatars}">
+        <span>${tweet.user.name}</span>
+      </div>
+      <div>
+        <span><a href="#">${tweet.user.handle}</a></span>
+      </div>
+    </header>
+    <div class="tweet-post">
+      <p>${escape(tweet.content.text)}</p>
+    </div>
+    <footer>
+      <span>
+        ${timeago.format(tweet["created_at"])}
+      </span>
+      <span class="icons">
+        <i class="fas fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
+      </span>
+    </footer>
+  </article>
+  `
+  return $tweet;
+  };
+
   $('#tweet-text').val('');
+
+  $('.write-tweet').click(() => {
+    $('.new-tweet').toggle("slow");
+  });
 
   const renderTweets = function(tweets) {
     for (const obj of tweets) {
@@ -64,6 +77,7 @@ $(document).ready(function() {
     .then(function() {
       $('#tweet-text').val('');
       $(".error-msgs").hide();
+      $($counter).val(140);
       loadTweets();
     })
 
