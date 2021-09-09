@@ -1,13 +1,46 @@
-
-
 $(document).ready(function() {
 
-  const escape = function (str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
+  $('.write-tweet').click(() => {
+    $('.new-tweet').toggle("slow", () => {
+      $('.error-msgs').hide();
+    });
+    });
 
+  // Form submit
+  $('form').on("submit", onSubmit);
+
+  loadTweets(); // Initially Renders Tweets
+})
+
+const onSubmit = function(event) {
+  event.preventDefault();
+
+  const $form = $(this);
+
+  let text = $form.find('#tweet-text').val();
+  const $counter = $form.find('.counter');
+
+  // Error Messages
+  if (text === "") {
+    return $(".error-msgs").text("Post cannot be empty!").slideDown().show();
+  }
+
+  if ($counter.val() < 0) {
+    return $(".error-msgs").text("Post cannot exceed over 140 character limit!").slideDown().show();
+  }
+
+  // Post /tweets
+  const data = $form.serialize()
+  $.post('/tweets', data)
+  .then(function() {
+    $('#tweet-text').val(''); // Refresh Value
+    $(".error-msgs").hide(); // Hide Error Msgs
+    $($counter).val(140); // Restarts counter
+    loadTweets(); // Instantly Loads Tweet To Page
+  })
+}
+
+  // Creates HTML For Tweet Post
   const createTweetElement = function(tweet) {
     let $tweet = `
     <article class="tweet">
@@ -38,18 +71,17 @@ $(document).ready(function() {
   return $tweet;
   };
 
-  $('#tweet-text').val('');
-
-  $('.write-tweet').click(() => {
-    $('.new-tweet').toggle("slow");
-  });
-
+  // Appends Tweets into #tweet-container
   const renderTweets = function(tweets) {
+     // Refresh Value When Page Reloads
+     $('#tweet-text').val('');
+
     for (const obj of tweets) {
       $('#tweets-container').prepend(createTweetElement(obj));
     }
   };
 
+  // Get /tweets
   const loadTweets = function() {
     $.get('/tweets', {method: 'GET'})
     .then(function(arr) {
@@ -57,31 +89,3 @@ $(document).ready(function() {
       renderTweets(arr);
     })
   };
-
-  $('form').submit(function(event) {
-    event.preventDefault();
-
-    let $inputField = $(this).children('.wrapper').children('#tweet-text').val();
-    const $counter = $(this).children('.button-wrapper').children('.counter');
-
-    if ($inputField === "") {
-      return $(".error-msgs").text("Post cannot be empty!").slideDown().show();
-    }
-
-    if ($counter.val() < 0) {
-      return $(".error-msgs").text("Post cannot exceed over 140 character limit!").slideDown().show();
-    }
-
-    const data = $(this).serialize()
-    $.post('/tweets', data)
-    .then(function() {
-      $('#tweet-text').val('');
-      $(".error-msgs").hide();
-      $($counter).val(140);
-      loadTweets();
-    })
-
-  });
-
-  loadTweets();
-})

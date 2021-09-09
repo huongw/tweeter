@@ -47,11 +47,14 @@ a {
   height: 70px;
   border-radius: 50%;
   background-color: rgb(161, 161, 241);
+  transition: 0.5s linear;
+  border: 2px solid rgb(104, 104, 170);
+}
+
+.button-properties {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transition: 0.5s linear;
-  border: 2px solid rgb(104, 104, 170);
 }
 
 .button-up:hover {

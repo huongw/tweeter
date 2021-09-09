@@ -1,21 +1,15 @@
 $(document).ready(function(){
+  $(window).on('scroll', topScroll);
+  
   $(this).scrollTop(0);
 });
 
-window.addEventListener("load", function() {
-  const buttonUp = document.querySelector('.button-up');
-
-  window.addEventListener("scroll", topScroll);
-
   function topScroll() {
+    const buttonUp = $('.button-up')
+    
     if (window.scrollY > 800) {
-      buttonUp.style.visibility = "visible"
-      buttonUp.style.opacity = "1"
-      buttonUp.style.pointerEvents = "initial"
+      buttonUp.removeClass('button-properties');
     } else {
-      buttonUp.style.visibility = "hidden";
-      buttonUp.style.opacity = "0";
-      buttonUp.style.pointerEvents = "initial"
+      buttonUp.addClass('button-properties');
     }
   }
-})
