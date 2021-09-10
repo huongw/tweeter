@@ -13,13 +13,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Default Page"]()
+!["Default Page"](https://github.com/huongw/tweeter/blob/master/docs/default.png?raw=true)
 
-!["New Tweet"]()
+!["New Tweet"](https://raw.githubusercontent.com/huongw/tweeter/master/docs/new-tweet.png)
 
-!["Error Msg"]()
+!["Error Msg"](https://raw.githubusercontent.com/huongw/tweeter/master/docs/error.png)
 
-!["Mobile Screen"]()
+!["Mobile Screen"](https://raw.githubusercontent.com/huongw/tweeter/master/docs/mobile.png)
 
 ## Dependencies
 
