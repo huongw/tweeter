@@ -6,10 +6,10 @@
 
 .bubble1 {
   top: 50%;
-  right: -100px;
+  right: -10rem;
   z-index: -1;
-  width: 700px;
-  height: 700px;
+  width: 70rem;
+  height: 70rem;
   background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(150, 181, 205, 0.5));
 }
 
@@ -17,16 +17,16 @@
   top: 80%;
   left: 0;
   z-index: -1;
-  width: 500px;
-  height: 500px;
+  width: 50rem;
+  height: 50rem;
 }
 
 .bubble3 {
   top: 20%;
   left: 0;
   z-index: -1;
-  width: 800px;
-  height: 800px;
+  width: 80rem;
+  height: 80rem;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(150, 181, 205, 0.5));
 }
 
@@ -35,7 +35,7 @@
   left: 70%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  width: 600px;
-  height: 600px;
+  width: 60rem;
+  height: 60rem;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(150, 181, 205, 0.5));
 }

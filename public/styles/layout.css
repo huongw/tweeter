@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -20,8 +21,8 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
   font-family: 'source sans pro', 'sans-serif';
+  overflow-x: hidden;
 }
 
 /*
@@ -29,7 +30,7 @@ body {
  */
 
  main{
-   max-width: 1000px;
+   max-width: 100rem;
    width: 90%;
    margin: auto;
  }
@@ -41,14 +42,17 @@ a {
 
 .button-up {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
-  width: 70px;
-  height: 70px;
+  bottom: 5rem;
+  right: 5rem;
+  width: 7rem;
+  height: 7rem;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(161, 161, 241);
   transition: 0.5s linear;
-  border: 2px solid rgb(104, 104, 170);
+  border: 0.2rem solid rgb(104, 104, 170);
 }
 
 .button-properties {
@@ -63,10 +67,7 @@ a {
 
 .button-up i {
   color: #fff;
-  font-size: 40px;
-  position: relative;
-  left: 21px;
-  top: 12px;
+  font-size: 4rem;
 }
 
 .button-up:hover i {
@@ -78,13 +79,13 @@ a {
     transform: translateY(0);
   }
   25% {
-    transform: translateY(-3px);
+    transform: translateY(-0.3rem);
   }
   50% {
     transform: translateY(0);
   }
   75% {
-    transform: translateY(3px);
+    transform: translateY(0.3rem);
   }
   100% {
     transform: translateY(0);

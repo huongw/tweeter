@@ -50,7 +50,7 @@ const onSubmit = function(event) {
         <span>${tweet.user.name}</span>
       </div>
       <div>
-        <span><a href="#">${tweet.user.handle}</a></span>
+        <span><a class="user-handle" href="#">${tweet.user.handle}</a></span>
       </div>
     </header>
     <div class="tweet-post">
@@ -73,10 +73,14 @@ const onSubmit = function(event) {
 
   // Appends Tweets into #tweet-container
   const renderTweets = function(tweets) {
-     // Refresh Value When Page Reloads
-     $('#tweet-text').val('');
+    // Refresh Value When Page Reloads
+    $('#tweet-text').val('');
+
+    // Clear #tweets-container before appending
+    $('#tweets-container').empty();
 
     for (const obj of tweets) {
+
       $('#tweets-container').prepend(createTweetElement(obj));
     }
   };
@@ -85,7 +89,6 @@ const onSubmit = function(event) {
   const loadTweets = function() {
     $.get('/tweets', {method: 'GET'})
     .then(function(arr) {
-      console.log("Success", arr);
       renderTweets(arr);
     })
   };
