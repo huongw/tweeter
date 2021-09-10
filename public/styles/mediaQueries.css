@@ -24,6 +24,7 @@
 
   article.tweet {
     padding: 1rem;
+    margin-bottom: 2rem;
   }
 
   .user-handle, .name-wrapper span {

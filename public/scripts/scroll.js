@@ -4,12 +4,12 @@ $(document).ready(function(){
   $(this).scrollTop(0);
 });
 
-  function topScroll() {
-    const buttonUp = $('.button-up')
+function topScroll() {
+  const buttonUp = $('.button-up');
     
-    if (window.scrollY > 800) {
+  if (window.scrollY > 800) {
       buttonUp.removeClass('button-properties');
-    } else {
+  } else {
       buttonUp.addClass('button-properties');
-    }
   }
+};

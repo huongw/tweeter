@@ -30,15 +30,15 @@ const onSubmit = function(event) {
   }
 
   // Post /tweets
-  const data = $form.serialize()
+  const data = $form.serialize();
   $.post('/tweets', data)
   .then(function() {
     $('#tweet-text').val(''); // Refresh Value
     $(".error-msgs").hide(); // Hide Error Msgs
     $($counter).val(140); // Restarts counter
     loadTweets(); // Instantly Loads Tweet To Page
-  })
-}
+  });
+};
 
   // Creates HTML For Tweet Post
   const createTweetElement = function(tweet) {

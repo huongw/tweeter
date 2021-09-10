@@ -60,7 +60,7 @@ article.tweet {
   padding: 2rem;
   border: 0.2rem solid rgba(199, 219, 235, 1);
   border-radius: 1.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
   background-color: rgba(199, 219, 235, 0.5);
   transition: 0.3s linear;
 }
